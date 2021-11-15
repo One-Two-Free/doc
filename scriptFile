@@ -1,0 +1,40 @@
+source /usr/share/nvm/init-nvm.sh
+nvm use --lts=fermium
+nvm ls
+npm i -g yarn
+
+sudo chown -R racoon:racoon 53e33df2-fc79-4df1-bca7-79bf0f0730f8/
+
+-----------------------------------------------------------------
+sudo systemctl start firewalld
+sudo systemctl start libvirtd
+
+sudo systemctl disable firewalld
+sudo systemctl disable libvirtd
+
+systemctl enable libvirtd
+systemctl start libvirtd
+
+sudo pacman -Syu ebtables dnsmasq
+
+sudo systemctl start firewalld
+sudo systemctl enable firewalld
+sudo systemctl restart libvirtd
+
+https://infoit.com.ua/linux/kak-ustanovit-kvm-na-manjaro-21/
+-----------------------------------------------------------------
+
+sudo chown -R racoon:racoon 53e33df2-fc79-4df1-bca7-79bf0f0730f8/
+
+
+
+
+
+
+
+
+
+
+
+webpack assets
+http://localhost:8000/webpack-dev-server

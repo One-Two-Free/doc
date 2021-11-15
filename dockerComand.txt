@@ -1,0 +1,102 @@
+update your manjaro linux
+sudo pacman -Syu
+ 
+Install Docker
+sudo pacman -S docker
+ 
+enable docker
+sudo systemctl start docker.service
+sudo systemctl enable docker.service
+sudo systemctl stop docker.service
+ 
+sudo docker stats
+
+
+check docker version & Info
+ 
+sudo docker version
+sudo docker info
+ 
+try to pull hello-world
+docker pull hello-world
+ 
+run hello-world
+sudo docker run hello-world
+ 
+check command
+
+список всех загруженных образов
+sudo docker images
+
+контейнеры список
+sudo docker ps -a
+
+запустить контейнеры в фоновом режиме используйте опцию -d:
+docker-compose up -d
+
+Остановить контейнеры, запущенные в фоновом режиме можно командой stop:
+docker-compose stop
+
+
+ПОДКЛЮЧЕНИЕ К КОНТЕЙНЕРУ
+docker-compose exec NAME /bin/bash
+
+sudo docker-compose exec webserver /bin/bash
+
+docker images [-a]	список image
+docker ps   запущенные контейнеры посмотреть
+docker ps -a посмотреть все контейнеры, которые остановились
+
+docker build -t hello-world .	создать образ с именем hello-world из текущей папки
+docker run --rm images	запустить образ images, -rm удалить после остановки контейнера
+
+
+docker rm [ID, NAMES] удалить контейнер
+docker rmi [ID, NAMES] удалить images
+
+docker stop остановить контейнер
+
+docker volume ls
+
+
+
+
+DKA-DEVELOP	-----------------------------------------------------------------------------------------------------------------------
+sudo usermod -aG docker nameuser
+docker run -it ubuntu bash		-it интерактивная работа на подключаемом терминальном устройстве
+
+docker ps
+docker ps -a 
+
+docker run -h CONTAINER -it ubuntu bash
+docker run --name dkadevelop -it ubuntu bash 
+
+docker inspect имяконтейнера	информация о контейнере
+docker diff имяконтейнера		изменения в контейнере
+docker logs имяконтейнера		
+
+Удаление остановленных:
+docker ps -aq -f status=exited
+docker rm -v $(docker ps -aq -f status=exited) 
+
+Получение, запуск (в фоне) и проброс.
+docker run -d -p 8000:8080 bitnami/apache
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
