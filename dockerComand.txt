@@ -31,6 +31,9 @@ sudo docker images
 контейнеры список
 sudo docker ps -a
 
+зайти в контейнер
+docker exec -it otus-php sh
+
 запустить контейнеры в фоновом режиме используйте опцию -d:
 docker-compose up -d
 
@@ -42,6 +45,8 @@ docker-compose stop
 docker-compose exec NAME /bin/bash
 
 sudo docker-compose exec webserver /bin/bash
+docker-compose ps
+
 
 docker images [-a]	список image
 docker ps   запущенные контейнеры посмотреть
@@ -54,6 +59,7 @@ docker run --rm images	запустить образ images, -rm удалить 
 docker rm [ID, NAMES] удалить контейнер
 docker rmi [ID, NAMES] удалить images
 
+docker start name   запустить остановленный контейнер
 docker stop остановить контейнер
 
 docker volume ls
@@ -62,35 +68,66 @@ docker volume ls
 
 
 DKA-DEVELOP	-----------------------------------------------------------------------------------------------------------------------
-sudo usermod -aG docker nameuser
+sudo usermod -aG docker NAMEUSER	добавить в группу docker пользователя
 docker run -it ubuntu bash		-it интерактивная работа на подключаемом терминальном устройстве
 
 docker ps
 docker ps -a 
 
-docker run -h CONTAINER -it ubuntu bash
-docker run --name dkadevelop -it ubuntu bash 
+docker run -h CONTAINER -it ubuntu bash   [-h имя хоста]
+docker run --name dkadevelop -it ubuntu bash    [--name задает имя контейнера  поле NAMES]
 
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 docker inspect имяконтейнера	информация о контейнере
 docker diff имяконтейнера		изменения в контейнере
-docker logs имяконтейнера		
+docker logs имяконтейнера		смотреть логи, список событий в контейнере
 
-Удаление остановленных:
+Удаление остановленных контейннеров:
 docker ps -aq -f status=exited
 docker rm -v $(docker ps -aq -f status=exited) 
 
 Получение, запуск (в фоне) и проброс.
-docker run -d -p 8000:8080 bitnami/apache
+docker run -d -p 8000:8080 bitnami/apache	[-p проброс портов host машины: порт в контейнере]
 
 
 
+Kill and Delete Containers and Images
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+docker rm -f $(docker ps -aq)        # Delete all Containers
+docker rmi -f $(docker images -q)    # Delete all Images
+
+---------------------------------------------------------------------
+
+Dockerfile набор операций для создания докер образа
+
+FROM ubunty		базовый образ ОС, самая первая инструкция
+
+команды выполняются внутри оболочки, внутри образа, [y на запросы дает да]
+RUN	apt-get update && apt-get install -y cowsay && ln -s /usr/games/cowsay /usr/bin/cowsay
+
+ENTRYPOINT ["cowsay"]		команды выполняются в контейнере
 
 
+---------------------------------------------------------------------
+docker-compose.yml
 
+version: '3.1'		версия файла
 
+services:			контейнреры которые будут запущены
 
+	db:								контейнерам присвоены имена
+		build: ./db					образ создать из Dockerfile
+		image: mariadb				образ который будет использован
+		restart: always				автоматический перезапуск
+		environment:				переменные в среде контейнера
+		  MYSQL_ROOT_PASSWORD: example		пароль для root
 
-
+  	adminer:
+		image: adminer
+		restart: always
+		ports:
+		  - 8080:8080
 
 
 
