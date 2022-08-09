@@ -4,6 +4,8 @@ sudo pacman -Syu
 Install Docker
 sudo pacman -S docker
  
+$ sudo usermod -aG docker $USER
+
 enable docker
 sudo systemctl start docker.service
 sudo systemctl enable docker.service
@@ -31,11 +33,14 @@ sudo docker images
 контейнеры список
 sudo docker ps -a
 
-зайти в контейнер
-docker exec -it otus-php sh
+удалить контейнеры все
+docker container prune
 
-запустить контейнеры в фоновом режиме используйте опцию -d:
-docker-compose up -d
+зайти в контейнер
+docker exec -it otus-php sh		(exec выполнить команду sh в запущенном контейнере)
+
+запустить контейнеры в фоновом режиме используйте опцию -d  (--build заново создать образы):
+docker-compose up -d --build
 
 Остановить контейнеры, запущенные в фоновом режиме можно командой stop:
 docker-compose stop
@@ -44,7 +49,7 @@ docker-compose stop
 ПОДКЛЮЧЕНИЕ К КОНТЕЙНЕРУ
 docker-compose exec NAME /bin/bash
 
-sudo docker-compose exec webserver /bin/bash
+docker-compose exec webserver /bin/bash
 docker-compose ps
 
 
@@ -101,7 +106,7 @@ docker rmi -f $(docker images -q)    # Delete all Images
 
 Dockerfile набор операций для создания докер образа
 
-FROM ubunty		базовый образ ОС, самая первая инструкция
+FROM ubunty  базовый образ ОС, самая первая инструкция
 
 команды выполняются внутри оболочки, внутри образа, [y на запросы дает да]
 RUN	apt-get update && apt-get install -y cowsay && ln -s /usr/games/cowsay /usr/bin/cowsay
@@ -128,6 +133,15 @@ services:			контейнреры которые будут запущены
 		restart: always
 		ports:
 		  - 8080:8080
+
+Сокращенная запись
+docker run \
+	--name my-nginx \
+	-v ${PWD}:/usr/share/nginx/html \
+	-p 8888:80 \
+	-d \
+	--rm \
+	nginx
 
 
 

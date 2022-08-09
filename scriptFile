@@ -26,8 +26,9 @@ https://infoit.com.ua/linux/kak-ustanovit-kvm-na-manjaro-21/
 
 sudo chown -R racoon:racoon 53e33df2-fc79-4df1-bca7-79bf0f0730f8/
 
-
-
+-----------------------------------------------------------------
+sudo systemctl enable httpd
+sudo systemctl restart httpd
 
 
 
@@ -38,3 +39,6 @@ sudo chown -R racoon:racoon 53e33df2-fc79-4df1-bca7-79bf0f0730f8/
 
 webpack assets
 http://localhost:8000/webpack-dev-server
+
+
+/var/lib/libvirt/images/manjaro.qcow2

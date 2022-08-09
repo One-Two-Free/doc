@@ -1,5 +1,4 @@
 pix
-chrome
 vlc
 double commander
 krusader
@@ -8,14 +7,12 @@ smplayer
 qpdfview
 figma-linux
 skype
-code-oss
 telegram
 vim
 gvim
 deluge
 plank
 mc
-code
 nvm
 flameshot
 
@@ -37,3 +34,34 @@ androidstudio
 
 docker
 docker-compose
+
+
+google-chrome
+	AdBlock
+	AdGuard Антибаннер
+	Browsec VPN - Free VPN for Chrome
+	PerfectPixel by WellDoneCode (pixel perfect)
+	Touch VPN - Secure and unlimited VPN proxy
+	Блокировка рекламы для Youtube™
+	Визуальные закладки
+	
+code-oss
+	auto rename tag
+	cobalt2 theme official
+	docker
+	editorconfig for vs
+	ESLint
+	Git Graph
+	Git History
+	GitLens — Git supercharged
+	Live Server
+	nftables
+	Prettier - Code formatter
+	Prettier ESLint
+	Russian Language Pack for Visual Studio Code
+
+	
+
+
+
+

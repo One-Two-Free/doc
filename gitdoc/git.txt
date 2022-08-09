@@ -124,3 +124,15 @@ git checkout -b comments origin/comments    создать ветку comments �
 git branch --set-upstream-to=origin/comments    связываем локальную ветку с удаленной
 
 git branch -vv    какие ветки связаны с удаленными
+
+
+
+
+git stash
+git stash save "Какое-нибудь сообщение"
+Git stash не прячет файлы, которые не добавлены в репозиторий. Чтобы их спрятать с остальными изменениями используется опция --include-untracked (или -u):
+git stash save -u
+git stash list
+git stash apply
+git stash apply stash@{1}
+git stash pop
