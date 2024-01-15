@@ -35,6 +35,8 @@ sudo systemctl enable httpd
 sudo systemctl restart httpd
 
 
+source pgadmin4/bin/activate
+pgadmin4
 
 
 
@@ -54,3 +56,41 @@ http://localhost:8000/webpack-dev-server
 cpp
 ----------------------------------------------------------------
 g++ -std=c++17 1.cpp && ./a.out
+
+
+
+-----------------------------------------------------------------
+
+https://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html
+grep " the " .zshrc
+grep -E '\w+line' .zshrc
+grep -E '(\w+|\s)line\s+' .zshrc
+grep -E '\d' .zshrc
+grep -P "\d+" .zshrc
+
+
+which cat echo mkdir rm
+type cat echo mkdir rm
+whereis cat echo mkdir rm
+
+find . -name "info"
+find ./test -name "copy*" -empty 2> /dev/null | xargs rm
+
+
+meta info
+
+stat ls_output.txt
+file ls_output.txt
+du -ha ../test
+touch -m ls_output.txt
+
+ls -l | tr -s ' ' | cut -d' ' -f5 | sort -n -r | uniq -c
+
+users
+printenv
+whoami
+id
+who
+
+
+-----------------------------------------------------------------
