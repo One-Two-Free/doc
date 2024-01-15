@@ -1,4 +1,6 @@
 source /usr/share/nvm/init-nvm.sh
+nvm use --lts
+npm start
 nvm use --lts=Gallium
 nvm ls
 nvm install --lts=Gallium
