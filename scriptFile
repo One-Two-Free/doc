@@ -25,7 +25,9 @@ https://infoit.com.ua/linux/kak-ustanovit-kvm-na-manjaro-21/
 -----------------------------------------------------------------
 
 sudo chown -R racoon:racoon 53e33df2-fc79-4df1-bca7-79bf0f0730f8/
+     chgrp
 
+sudo chmod go-x file.txt        delete for groop, other mood execute
 -----------------------------------------------------------------
 sudo systemctl enable httpd
 sudo systemctl restart httpd
@@ -80,5 +82,14 @@ whoami
 id
 who
 
+groups          print the group membership of a user
+groups root
 
+groupadd    create a group
+groupdel    delete a group
+groupmod    modify a group
 -----------------------------------------------------------------
+
+
+export NODE_OPTIONS=--openssl-legacy-provider
+
