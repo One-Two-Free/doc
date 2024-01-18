@@ -1,6 +1,10 @@
 source /usr/share/nvm/init-nvm.sh
-nvm use --lts=fermium
+nvm use --lts
+npm start
+nvm use --lts=Gallium
 nvm ls
+nvm install --lts=Gallium
+nvm install --lts=Hydrogen
 npm i -g yarn
 
 sudo chown -R racoon:racoon 53e33df2-fc79-4df1-bca7-79bf0f0730f8/
@@ -46,6 +50,14 @@ http://localhost:8000/webpack-dev-server
 
 
 /var/lib/libvirt/images/manjaro.qcow2
+
+
+
+
+
+cpp
+----------------------------------------------------------------
+g++ -std=c++17 1.cpp && ./a.out
 
 
 
