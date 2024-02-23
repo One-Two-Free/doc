@@ -2,6 +2,7 @@ pix
 vlc
 double commander
 krusader
+ranger
 emacss
 smplayer
 qpdfview
@@ -9,12 +10,13 @@ figma-linux
 skype
 telegram
 vim
-gvim
+nvim
 deluge
 plank
 mc
 nvm
 flameshot
+btop
 
 bash-completion
 
