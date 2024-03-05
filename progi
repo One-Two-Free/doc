@@ -2,23 +2,29 @@ pix
 vlc
 double commander
 krusader
-ranger
 emacss
 smplayer
 qpdfview
 figma-linux
 skype
 telegram
-vim
-nvim
 deluge
 plank
 mc
-nvm
 flameshot
-btop
 
-bash-completion
+terminal
+	bash-completion
+	kitty
+	zsh
+	ranger
+	vim
+	neovim
+	lazyvim
+	btop
+
+docker
+docker-compose
 
 virt-manager
 libvirt
@@ -33,10 +39,6 @@ beyond compare
 apace netbeans
 idea
 androidstudio
-
-docker
-docker-compose
-
 
 google-chrome
 	AdBlock
