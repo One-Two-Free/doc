@@ -1,2 +1,5 @@
 text-expander
-https://codesandbox.io/s/react-challenge-text-expander-final-zy6f5w
+    https://codesandbox.io/s/react-challenge-text-expander-final-zy6f5w
+
+Jonas Schmedtmann
+    https://github.com/jonasschmedtmann/ultimate-react-course
