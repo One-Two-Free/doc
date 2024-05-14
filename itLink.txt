@@ -1,9 +1,13 @@
-github.com
- 
-  tools for develop
+CPP
+  https://www.youtube.com/watch?v=YXbrMny86U0&list=PLrCZzMib1e9qjGLjg83bCksf3N7FIy7jg&ab_channel=VKTeamgithub.com
+  
+tools for develop
   https://github.com/danlark1/hse_missing_cs_education/tree/master
   https://github.com/mokevnin?tab=repositories
- 
-  redux-ecosystem-links
+
+utimur webpack-course
+  https://github.com/utimur/webpack-course/tree/master
+
+redux-ecosystem-links
   https://github.com/markerikson/redux-ecosystem-links 
   https://github.com/markerikson/react-redux-links
