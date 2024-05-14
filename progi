@@ -66,6 +66,16 @@ code-oss
 
 	
 
+HOT KEY
 
+  kitty
+    :filter mkv
+    ^ + shift + enter   new window + split
+    ^ + shift + l       move splited window
+    ^ + shift + [ or ]  change cursor for splitted window
+
+  vivaldi
+    ^ + shift + a       toggle show addres panel
+    ^ + alt + w         toggle work space
 
 
