@@ -1,0 +1,38 @@
+cat filePath
+head -n 5 filePath
+tail -n 5 filePath
+less
+
+wc -lwc file.txt
+du -h filePath
+
+find . -type f
+find . -type d
+find . -type f -mtime -7
+find . -type f -size +10M
+find . -empty –delete       //Delete all empty files in a directory:
+
+du -h IMG_9328.jpg 1> output.txt
+du -h IMG_9328.jpg 2> error.txt
+du -h IMG_9328.jpg > output.txt 2> error.txt
+du -h IMG_9328.jpg IMG_1234.jpg 1>> out.txt 2>> out.txt
+
+[command] > out.txt 2>&1
+
+sort filePath
+sort filePath -k 2  // data sorted by second column
+sort -u file.txt    // get unique lines after sort
+
+uniq    // get the unique lines, before need to sort
+uniq -d //find the dublicate lines
+
+grep 'pattern' file.txt  // find a pattern in a output or a file
+ip addr show | grep -F 'inet'
+
+grep -F '.zip' access.log | cut -d ' ' -f 6-7
+grep -F '.zip' access.log | cut -d ' ' -f 7 | sort | uniq | wc -l
+
+echo "${PATH}" | cut -d ':' -f 1-5 | sed 's/:/\n/g'
+
+set -o vi     write and edit text in the command-line with `vi`
+set -o emacs  Return to default mode:
