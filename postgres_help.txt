@@ -1,0 +1,37 @@
+
+postgresql lesson BrianHolt
+
+---------------------------------------------------------------------
+
+docker pull postgres:14
+docker pull btholt/complete-intro-to-sql:14
+
+-d  detached, which means run it in the background don't run in the foreground
+-p  expose this port
+docker run -e POSTGRES_PASSWORD=lol --name=pg --rm -d -p 5432:5432 postgres:14
+
+stop docker container name pg
+docker kill pg
+
+connected to postgres, -u run it as the postgres user, -it interactive, pg name of the container, psql name of the command for bash
+docker exec -u postgres -it pg psql
+
+
+help psql command
+\?
+
+list database
+\l
+
+\! [COMMAND]           execute command in shell or start interactive shell
+\! pwd
+
+CREATE DATABASE recipeguru;
+
+switch connection
+\c recipeguru
+
+CREATE TABLE ingredients (
+id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+title VARCHAR ( 255 ) UNIQUE NOT NULL
+);

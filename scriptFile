@@ -101,7 +101,7 @@ groupadd    create a group
 groupdel    delete a group
 groupmod    modify a group
 -----------------------------------------------------------------
-
+p10k configure
 
 export NODE_OPTIONS=--openssl-legacy-provider
 

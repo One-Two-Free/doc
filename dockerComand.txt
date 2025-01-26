@@ -142,12 +142,3 @@ docker run \
 	-d \
 	--rm \
 	nginx
-
-
-
-
-
-
-
-
-
