@@ -26,6 +26,8 @@ list database
 \! [COMMAND]           execute command in shell or start interactive shell
 \! pwd
 
+
+------------ Work with table. Create, alter, insert.
 CREATE DATABASE recipeguru;
 
 switch connection
@@ -35,3 +37,27 @@ CREATE TABLE ingredients (
 id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
 title VARCHAR ( 255 ) UNIQUE NOT NULL
 );
+
+ALTER TABLE ingredients
+ADD COLUMN image VARCHAR ( 255 ),
+ADD COLUMN type VARCHAR ( 50 ) NOT NULL DEFAULT 'vegetable';
+
+INSERT INTO ingredients (
+ title, image, type
+) VALUES (
+  'red pepper', 'red_pepper.jpg', 'vegetable'
+);
+
+UPDATE ingredients SET image = 'watermelon.jpg' WHERE title = 'watermelon';
+
+
+
+
+
+
+
+
+
+
+
+
