@@ -8,6 +8,10 @@ tools for develop
 utimur webpack-course
   https://github.com/utimur/webpack-course/tree/master
 
+web example
+  https://github.com/Bargamotova/Universal_dev   - верстка
+  https://github.com/Bargamotova/Universal - готовый
+
 redux-ecosystem-links
   https://github.com/markerikson/redux-ecosystem-links 
   https://github.com/markerikson/react-redux-links
