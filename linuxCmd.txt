@@ -36,3 +36,24 @@ echo "${PATH}" | cut -d ':' -f 1-5 | sed 's/:/\n/g'
 
 set -o vi     write and edit text in the command-line with `vi`
 set -o emacs  Return to default mode:
+
+
+
+// MANAGE USERS
+// user, group information is stored
+  /etc/passwd   /etc/shadow   /etc/group
+
+
+useradd -m -d /home/name_person name_person   // create user
+passwd    //change password current user
+
+sudo usermod -G raccoon,lp,docker testUser    // change secondary group to testUser
+
+groups testUser     // check in what groups does testUser enter
+----lp raccoon docker testUser
+
+sudo usermod -aG deluge,qemu testUser   // add secondary group to testUser
+
+
+gpasswd -d user group   // Remove a user from the named group
+

@@ -1,3 +1,14 @@
+//  enter psql as user postgres
+psql -U postgres
+
+# Connect to PostgreSQL as your new user
+psql -U myuser -d mydb -h localhost
+
+-U: Specifies the username
+-d: Specifies the database name
+-h: Specifies the host (localhost)
+
+---------------------------------------------------------------------
 
 postgresql lesson BrianHolt
 
