@@ -1,5 +1,14 @@
+// Login as a postgres user
+sudo -ui postgres
+
 //  enter psql as user postgres
 psql -U postgres
+
+# Create a new database user (role) with a password
+CREATE ROLE myuser WITH LOGIN PASSWORD 'mypassword';
+
+# Create a new database
+CREATE DATABASE mydb OWNER myuser;
 
 # Connect to PostgreSQL as your new user
 psql -U myuser -d mydb -h localhost
@@ -7,6 +16,9 @@ psql -U myuser -d mydb -h localhost
 -U: Specifies the username
 -d: Specifies the database name
 -h: Specifies the host (localhost)
+
+#assign role createdb to user raccoondb
+ALTER USER raccoondb CREATEDB;
 
 ---------------------------------------------------------------------
 
