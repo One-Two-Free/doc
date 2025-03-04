@@ -73,7 +73,14 @@ INSERT INTO ingredients (
 
 UPDATE ingredients SET image = 'watermelon.jpg' WHERE title = 'watermelon';
 
-
+--inner join
+SELECT recipes.title, recipes.body, recipes_photos.url
+  FROM recipes_photos
+  INNER JOIN
+    recipes
+  ON
+    recipes_photos.recipe_id = recipes.recipe_id
+  WHERE recipes_photos.recipe_id = 4;
 
 
 
