@@ -82,6 +82,9 @@ docker ps -a
 docker run -h CONTAINER -it ubuntu bash   [-h имя хоста]
 docker run --name dkadevelop -it ubuntu bash    [--name задает имя контейнера  поле NAMES]
 
+//use volume
+docker run -p 3000:80 -d --name feedback-app --rm -v ./feedback:/app/feedback feedback-node
+docker run -p 3000:80 -d --name feedback-app --rm -v ./feedback:/app/feedback -v "/mnt/data/temp/docker/testMaximilian/data-volumes-01-starting-setup:/app" -v /app/node_modules feedback-node:env
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 docker inspect имяконтейнера	информация о контейнере

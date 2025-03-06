@@ -82,6 +82,8 @@ SELECT recipes.title, recipes.body, recipes_photos.url
     recipes_photos.recipe_id = recipes.recipe_id
   WHERE recipes_photos.recipe_id = 4;
 
+// number of row 
+select count (*) from table_name;
 
 
 
